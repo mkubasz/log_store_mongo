@@ -1,0 +1,15 @@
+GET localhost:3000/health
+
+###
+
+GET localhost:3000/api/metrics
+Authorization: Bearer 123
+Client-Id: 123
+
+###
+
+GET localhost:3000/api/metrics?groupByDate=day&startDate=2023-09-04T00:00:00.000Z&endDate=2023-09-05T00:00:00.000Z
+Authorization: Bearer 123
+Client-Id: 123
+
+###
