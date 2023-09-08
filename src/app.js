@@ -21,9 +21,8 @@ module.exports = async (db) => {
     const {notFound, errorHandler} = require("./error");
     const app = express();
     app.use(pino());
-    const repository = require("./metrics/repository")(db);
 
-    const routes = require("./metrics/routes")({ repository });
+    const routes = require("./metrics/routes")({ db });
     app.use(express.json());
     app.use('/health', (req, res) => {
         res.status(200).send();
